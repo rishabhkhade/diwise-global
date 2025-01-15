@@ -7,9 +7,10 @@ import contact from "./assets/communicate.webp";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiWorld } from "react-icons/tfi";
-import { TfiFacebook } from "react-icons/tfi";
-import { FaLinkedinIn } from "react-icons/fa";
-import { IoCall } from "react-icons/io5";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FiPhone } from "react-icons/fi";
+import logo from "./assets/logo.png"
+import { SlSocialFacebook } from "react-icons/sl";
 const App = () => {
   const [data, setData] = useState({
     social: false,
@@ -65,8 +66,9 @@ const App = () => {
       <div class="card_parent">
         <div class="card">
           <div class="top_section">
+          <img src={logo} alt="" />
             <div class="profile">
-              <h4>DIwise Global Management Consultant</h4>
+              <h4>DIwise Global <br/> Management Consultant</h4>
 
               <div class="btn" onClick={saveContact}>
                 Save Contact
@@ -116,26 +118,26 @@ const App = () => {
                       href="https://www.instagram.com/diwiseltd/"
                       target="blank"
                     >
-                      diwiseltd
+                      @diwiseltd
                     </a>
                   </div>
                   <div class="insta cont">
                     <div class="icon">
-                      <TfiFacebook />
+                    <SlSocialFacebook />
                     </div>
                     <a href="https://www.facebook.com/DIwiseLtd" target="blank">
-                      DIwise
+                    DIwiseLtd
                     </a>
                   </div>
                   <div class="insta cont">
                     <div class="icon">
-                      <FaLinkedinIn />
+                      <SlSocialLinkedin />
                     </div>
                     <a
                       href="https://www.linkedin.com/company/diwiseltd/"
                       target="blank"
                     >
-                      DIwise
+                     diwiseltd
                     </a>
                   </div>
 
@@ -144,7 +146,7 @@ const App = () => {
                       <FaXTwitter />
                     </div>
                     <a href="https://x.com/MarwahaPrajakta?mx=2" target="blank">
-                      DIwise
+                     Twitter DIwise
                     </a>
                   </div>
                 </div>
@@ -164,12 +166,12 @@ const App = () => {
               {data.brochure && (
                 <div class="social_medi">
                   <div class="insta cont">
-                    <div class="icon">
+                    {/* <div class="icon">
                       <TfiWorld />
-                    </div>
-                    <a href="https://www.diwiseglobal.com/" target="blank">
+                    </div> */}
+                    {/* <a href="https://www.diwiseglobal.com/" target="blank">
                       diwiseglobal.com
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               )}
@@ -177,7 +179,7 @@ const App = () => {
                 <div class="social_medi">
                   <div class="insta cont">
                     <div class="icon">
-                      <IoCall />
+                      <FiPhone />
                     </div>
                     <a href="tel:+918482936866" target="blank">
                       +91 8482936866
@@ -185,7 +187,7 @@ const App = () => {
                   </div>
                   <div class="insta cont">
                     <div class="icon">
-                      <IoCall />
+                      <FiPhone />
                     </div>
                     <a href="tel:+971508060418" target="blank">
                       +971-50-8060418
@@ -193,7 +195,7 @@ const App = () => {
                   </div>
                   <div class="insta cont">
                     <div class="icon">
-                      <IoCall />
+                      <FiPhone />
                     </div>
                     <a href="tel:+447398814161" target="blank">
                       +44 7398 814161
