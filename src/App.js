@@ -11,7 +11,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { FiPhone } from "react-icons/fi";
 import logo from "./assets/logo.png";
 import { SlSocialFacebook } from "react-icons/sl";
-import { Helmet } from "react-helmet";
+
 const App = () => {
   const [data, setData] = useState({
     social: false,
@@ -64,21 +64,7 @@ const App = () => {
 
   return (
     <>
-      <Helmet>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10946340567"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-10946340567');
-          `}
-        </script>
-      </Helmet>
-
+      
       <div class="card_parent">
         <div class="card">
           <div class="top_section">
