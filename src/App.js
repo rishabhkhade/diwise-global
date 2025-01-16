@@ -9,8 +9,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiWorld } from "react-icons/tfi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FiPhone } from "react-icons/fi";
-import logo from "./assets/logo.png"
+import logo from "./assets/logo.png";
 import { SlSocialFacebook } from "react-icons/sl";
+import { Helmet } from "react-helmet";
 const App = () => {
   const [data, setData] = useState({
     social: false,
@@ -63,12 +64,29 @@ const App = () => {
 
   return (
     <>
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10946340567"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-10946340567');
+          `}
+        </script>
+      </Helmet>
+
       <div class="card_parent">
         <div class="card">
           <div class="top_section">
-          <img src={logo} alt="" />
+            <img src={logo} alt="" />
             <div class="profile">
-              <h4>DIwise Global <br/> Management Consultant</h4>
+              <h4>
+                DIwise Global <br /> Management Consultant
+              </h4>
 
               <div class="btn" onClick={saveContact}>
                 Save Contact
@@ -115,7 +133,7 @@ const App = () => {
                       <FaInstagram />
                     </div>
                     <a
-                      href="https://www.instagram.com/diwiseltd/"
+                      href="https://www.instagram.com/diwise_global"
                       target="blank"
                     >
                       @diwiseltd
@@ -123,10 +141,13 @@ const App = () => {
                   </div>
                   <div class="insta cont">
                     <div class="icon">
-                    <SlSocialFacebook />
+                      <SlSocialFacebook />
                     </div>
-                    <a href="https://www.facebook.com/DIwiseLtd" target="blank">
-                    DIwiseLtd
+                    <a
+                      href="https://www.facebook.com/DIwiseglobal/"
+                      target="blank"
+                    >
+                      DIwiseLtd
                     </a>
                   </div>
                   <div class="insta cont">
@@ -134,21 +155,21 @@ const App = () => {
                       <SlSocialLinkedin />
                     </div>
                     <a
-                      href="https://www.linkedin.com/company/diwiseltd/"
+                      href="https://www.linkedin.com/company/diwise-global/"
                       target="blank"
                     >
-                     diwiseltd
+                      diwiseltd
                     </a>
                   </div>
 
-                  <div class="insta cont">
+                  {/* <div class="insta cont">
                     <div class="icon">
                       <FaXTwitter />
                     </div>
                     <a href="https://x.com/MarwahaPrajakta?mx=2" target="blank">
                      Twitter DIwise
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               )}
               {data.websites && (
